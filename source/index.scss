@@ -1,0 +1,106 @@
+@import "./styles/branding.scss";
+
+// overrides
+.hw_header {
+    background-color: #7EC7CC;
+
+    @media only screen and (max-width: 744px) {
+        .hw_navlink {
+            color: #414141 !important;
+            .hw_svgicon__fill {
+                fill: #414141 !important;
+            }
+        }
+    }
+}
+
+.hw_heading--teaser {
+    @media only screen and (max-width: 460px) {
+        margin-top: 20px;
+    }
+    padding-bottom: 20px;
+}
+
+
+.hw_heading--teaser { font-size: 1.8em; }
+.hw_heading--large { font-size: 1.3em; }
+.hw_heading--medium { font-size: 1.05em; }
+body {
+    font-size: 19px;
+    @media only screen and (min-width: 460px) {
+        font-size: 21px;
+    }
+    @media only screen and (min-width: 744px) {
+        font-size: 25px;
+    }
+    @media only screen and (min-width: 1280px) {
+        font-size: 30px;
+    }
+}
+
+.hw_logo {
+    &__image {
+        width: 35px ;
+    }
+}
+.hw_navlink {
+    .hw_svgicon__fill {
+        fill: $color-primary-dark !important;
+    }
+    svg {
+        margin-top: 3px !important;
+        padding-bottom: 1px;
+        border-width: 2.5px !important;
+        border-color: $color-primary-dark !important;   
+    }
+}
+.hw_navlink.hw_navlink--active {
+    color: $color-secondary !important;
+    .hw_svgicon__fill {
+        fill: $color-secondary !important;
+    }
+    svg {
+        border-color: $color-secondary !important;   
+    }
+}
+.hw_logo__secondary {
+    color: $color-secondary;
+}
+.hw_footer {
+    background-color: $color-primary-dark;
+    .hw_backtotop__text { color: $color-primary-light !important;}
+    .hw_svg__fill { fill: $color-primary-light; }
+    .hw_copyright p {
+        color: $color-primary-light;
+    }
+    .hw_heading {
+        color: $color-primary-light
+    }
+    @media only screen and (max-width: 744px) {
+        .hw_navigation a { color: $color-primary-dark !important; }
+    }
+    .hw_navigation {
+        margin-top: -10px;
+    }
+    .hw_navigation a { color: $color-primary-light;}
+}
+
+ /* width */
+::-webkit-scrollbar {
+    width: 16px;
+    opacity: 0.5;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: $color-primary-light;
+    border-radius: 2px;
+    opacity: 0.5;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $color-secondary;
+    border-radius: 2px;
+    opacity: 0.5;
+  }
