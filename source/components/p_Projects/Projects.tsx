@@ -3,7 +3,7 @@ import { setClass } from "../../modules/setClass";
 import { ProjectsProps } from "./Projects.types";
 import { Heading, Image, Paragraph } from "da-awesome-library/build";
 import rabbithutch from "../../../public/images/rabbithutch.png"
-import hatchingwonders from "../../../public/images/hatchingwonders.png"
+//import hatchingwonders from "../../../public/images/hatchingwonders.png"
 import "./Projects.scss";
 
 const Projects = ({theme, className}: ProjectsProps) => {
@@ -20,9 +20,7 @@ const Projects = ({theme, className}: ProjectsProps) => {
             <div className="hw_projects__list">
             <Project theme={theme} description="" image={rabbithutch} name={"The Rabbit Hutch"} />
             <Project theme={theme} description="" image={rabbithutch} name={"Files Planet"} />
-            <Project theme={theme} description="" image={hatchingwonders} name={"Hatching Wonders"} />
-            <Project theme={theme} description="" image={hatchingwonders} name={"Coding For Everyone"} />
-            <Project theme={theme} description="" image={hatchingwonders} name={"Finance Overview<"} />
+
             </div>
             <br/>
             <Heading theme={theme} size="large" content={"Tools"} />

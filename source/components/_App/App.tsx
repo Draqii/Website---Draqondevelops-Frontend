@@ -8,7 +8,6 @@ import pageicon from "../../../public/favicon/page_icon.png"
 import HomeIcon from "../../../public/svgs/home.svg"
 import Home from "../p_Home/Home";
 import Projects from "../p_Projects/Projects";
-import VoluntaryWork from "../p_VoluntaryWork/VoluntaryWork";
 import Donate from "../p_Donate/Donate";
 import Contact from "../p_Contact/Contact";
 import TermsAndConditions from "../p_TermsAndConditions/TermsAndConditions";
@@ -36,6 +35,8 @@ import tech_vsc from "../../../public/images/tech_vsc.png"
 import tech_webpack from "../../../public/images/tech_webpack.png"
 import Hire from "../p_Hire/Hire";
 import "./App.scss";
+import NotFound from "../p_NotFound/NotFound";
+import Welcome from "../p_Welcome/Welcome";
 
 const App = () => {
 
@@ -80,12 +81,13 @@ const App = () => {
                     <Route path="/" Component={() => <Home theme={getTheme()} />} />
                     <Route path="/projects" Component={() => <Projects theme={getTheme()} />} />
                     <Route path="/contact" Component={() => <Contact theme={getTheme()} />} />
-                    <Route path="/charity" Component={() => <VoluntaryWork theme={getTheme()} />} />
                     <Route path="/donate" Component={() => <Donate theme={getTheme()} />} />
                     <Route path="/hire-me" Component={() => <Hire theme={getTheme()} />} />
                     <Route path="/terms-and-conditions" Component={() => <TermsAndConditions theme={getTheme()} />} />
                     <Route path="/privacy-policy" Component={() => <PrivacyPolicy theme={getTheme()} />} />
                     <Route path="/contact-us" Component={() => <Contact theme={getTheme()} />} />
+                    <Route path="/welcome" Component={() => <Welcome theme={getTheme()} />} />
+                    <Route path="/*" Component={() => <NotFound theme={getTheme()} />} />
                 </Routes>
             </Main>
             <Footer 
