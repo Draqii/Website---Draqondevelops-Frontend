@@ -1,11 +1,8 @@
 import React from "react";
 import ReactDOM from 'react-dom/client';
 import { HashRouter } from "react-router-dom";
-import "./styles/reset.scss";
-import "./styles/fontfaces.scss";
-import App from "./components/_App/App";
 import "./index.scss";
-import "./styles/font_overrides.scss"
+import App from "./components/_App/App";
 
 const element = (
     <React.StrictMode> 
