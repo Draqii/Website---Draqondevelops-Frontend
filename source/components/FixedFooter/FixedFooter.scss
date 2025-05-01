@@ -1,0 +1,29 @@
+.hw_fixedfooter {
+    background-color: rgb(75, 68, 72);
+    position: relative;
+    z-index: 3;
+    padding: 0 10px 20px 10px;
+
+    &__icons {
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+        justify-content: center;
+        justify-self: center;
+        max-width: 800px;
+        flex-wrap: wrap;
+    }
+
+    &__icon {
+        width: 40px;
+        max-height: 35px;
+        align-self: center;
+    }
+
+    &__heading {
+        font-weight: 900;
+        padding-bottom: 20px;
+        padding-top: 10px;
+    }
+}
+

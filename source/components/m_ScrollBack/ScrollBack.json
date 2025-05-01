@@ -1,0 +1,12 @@
+{
+    "english": {
+        "text1": "Scroll",
+        "text2": "Back",
+        "text3": "Down"
+    },
+    "german": {
+        "text1": "Nach",
+        "text2": "Oben",
+        "text3": "Unten"
+    }
+}

@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from 'react-dom/client';
 import { HashRouter } from "react-router-dom";
 import "./index.scss";
+import "./styles/fontfaces.scss";
+import "./styles/scrollbar.scss";
 import App from "./components/_App/App";
 
 const element = (

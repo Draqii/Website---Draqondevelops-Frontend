@@ -1,0 +1,29 @@
+.hw_scrollback {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    &__icon {
+        width: 30px;
+        height: 30px;
+        .hw_svg__fill {
+            fill: #FFFDFB;
+        }
+    }
+    &__Down {
+        transform: rotate(180deg);
+    }
+    &__textcontainer {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    transition: transform .15s;
+    &:hover {
+        transform: scale(1.06);
+    }
+    &:active {
+        transform: scale(0.92);
+    }
+}
