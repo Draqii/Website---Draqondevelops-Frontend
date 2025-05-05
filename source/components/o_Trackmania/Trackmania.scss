@@ -1,0 +1,12 @@
+.hw_trackmania {
+    position: relative;
+    &__transition {
+        z-index: 99;
+        width: 100vW;
+        margin-left: -40px;
+        margin-top: -57px;
+        margin-bottom: 30px;
+        height: 160px;
+    }
+}
+

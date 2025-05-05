@@ -8,17 +8,32 @@
 
         .hw_app__uppercontent {
             position: relative;
+            .hw_heading, .hw_text, a {
+                color: #FFFDFB;
+                text-decoration-color: #FFFDFB;
+            }
         }
         .hw_app__lowercontent {
-            background-color: #72C3BC;
+            background: linear-gradient(#FF82BE, #9A366A);
             width: calc(100vW - 16px - 80px);
-            left: 0;
+            left: -460px;
+            @media only screen and (max-width: 1440px) {
+                left: -350px;
+            }
+            @media only screen and (max-width: 1280px) {
+                left: -180px;
+                right: 40px;
+            }
             padding: 40px;
-            position: absolute;
+            position: relative;
             overflow-x: hidden;
             overflow-y: hidden;
             min-height: 300px;
             box-shadow: 0px -3px 6px 2px rgba(0, 0, 0, 0.4);
+            .hw_heading, .hw_text, a {
+                color: #FFFDFB;
+                text-decoration-color: #242424;
+            }
         }
 
         .hw_section__top {
@@ -103,10 +118,6 @@
             left: -240px;
             max-height: 470px;
         }
-    }
-    .hw_heading, .hw_text, a {
-        color: #FFFDFB;
-        text-decoration-color: #FFFDFB;
     }
 }
 .hw_section__teaser {
