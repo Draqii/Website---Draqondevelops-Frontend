@@ -15,6 +15,15 @@ const Trackmania = ({language, theme, className}: TrackmaniaProps) => {
             <Paragraph size={"medium"} theme={"light"}>Trackmania</Paragraph>
             <div className="hw_section__detailsinner">
                 <Heading children={"Join The Bonk Club!"} size={"xlarge"} theme={"light"} />
+                <Paragraph size={"medium"} theme={"light"}>Open Trackmania and search for the [BONK!] club! Joining it does not require registration.</Paragraph>
+            </div>
+            <div className="hw_section__detailsinner">
+                <Heading children={"Race On My Tracks!"} size={"xlarge"} theme={"light"} />
+                <Paragraph size={"medium"} theme={"light"}>Open Trackmania and search for the [BONK!] club! Joining it does not require registration.</Paragraph>
+            </div>
+            <div className="hw_section__detailsinner">
+                <Heading children={"Download My Skins!"} size={"xlarge"} theme={"light"} />
+                <Paragraph size={"medium"} theme={"light"}>Open Trackmania and search for the [BONK!] club! Joining it does not require registration.</Paragraph>
             </div>
         </div>
     )
