@@ -1,0 +1,36 @@
+.hw_webdev {
+    &__title {
+        padding-bottom: 20px;
+        text-align: center !important;
+    }
+    &__content {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+    }
+    &__firstcontent {
+        width: 33%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    &__secondcontent {
+        width: 66%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    &__innercontent {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+
+        .hw_section__details {
+            width: 100%;
+        }
+    }
+    .hw_button .hw_text {
+        color: black !important;
+    }
+}
+

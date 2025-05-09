@@ -18,6 +18,9 @@
             &:has(.hw_trackmania) {
                 background: white;
             }
+            &:has(.hw_webdev) {
+                background: linear-gradient(#b9e762 0%, #549420 100%);
+            }
             width: calc(100vW - 16px - 80px);
             left: -460px;
             @media only screen and (max-width: 1440px) {

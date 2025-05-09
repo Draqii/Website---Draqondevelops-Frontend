@@ -10,9 +10,10 @@ import nav_download from "../../../public/images/nav_download.png"
 import nav_camera from "../../../public/images/nav_camera.png"
 import char_a from "../../../public/images/char_a.png"
 import char_b from "../../../public/images/char_b.png"
-import "./Main.scss";
-import Trackmania from "../o_Trackmania/Trackmania";
 import Images from "../o_Images/Images";
+import Trackmania from "../o_Trackmania/Trackmania";
+import Webdev from "../p_Webdev/Webdev";
+import "./Main.scss";
 
 const Main = ({ bg, setBG, language, theme, className }: MainProps) => {
 
@@ -58,11 +59,7 @@ const Main = ({ bg, setBG, language, theme, className }: MainProps) => {
             <div className="hw_app__lowercontent">
                 <section className="hw_section__details">
                     {activeSection === 0 ? <Trackmania /> 
-                    :activeSection === 1 ?
-                    <section className="hw_section__details">
-                        <Heading children={"Web Design & Development!"} size={"xxlarge"} theme={"light"} />
-                        <Paragraph size={"medium"} theme={"light"}>Web Design & Development</Paragraph>
-                    </section> 
+                    :activeSection === 1 ? <Webdev /> 
                     :activeSection === 3 ?
                     <section className="hw_section__details">
                         <Heading children={"3D Blender And Unreal!"} size={"xxlarge"} theme={"light"} />
