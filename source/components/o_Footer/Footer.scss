@@ -31,6 +31,10 @@
         }   
     }
 
+    .hw_heading, .hw_text {
+        color: white !important;
+    }
+
     &__socials, &__copyright, &__scrollback {
         width: fit-content;
     }

@@ -15,6 +15,9 @@
         }
         .hw_app__lowercontent {
             background: linear-gradient(#FF82BE, #9A366A);
+            &:has(.hw_trackmania) {
+                background: white;
+            }
             width: calc(100vW - 16px - 80px);
             left: -460px;
             @media only screen and (max-width: 1440px) {
