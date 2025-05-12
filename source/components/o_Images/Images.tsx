@@ -22,7 +22,7 @@ const Images = ({language, theme, className}: ImagesProps) => {
 
     return (
         <div className={setClass("hw_images", [theme], className)}>
-            <Heading children={"Hai! I'm Draqii!"} size={"teaser"} theme={"light"} />
+            <Heading className="hw_images__title" children={"Hai! I'm Draqii!"} size={"teaser"} theme={"light"} />
             <div className="hw_images__content">
                 <div className="hw_images__section">
                     <Heading children={"I’m A Creative Nerdy Dude!"} size={"small"} theme={"light"} />

@@ -12,8 +12,10 @@ import char_a from "../../../public/images/char_a.png"
 import char_b from "../../../public/images/char_b.png"
 import Images from "../o_Images/Images";
 import Trackmania from "../o_Trackmania/Trackmania";
-import Webdev from "../p_Webdev/Webdev";
+import Webdev from "../o_Webdev/Webdev";
 import "./Main.scss";
+import Blender from "../o_Blender/Blender";
+import Downloads from "../o_Downloads/Downloads";
 
 const Main = ({ bg, setBG, language, theme, className }: MainProps) => {
 
@@ -49,7 +51,7 @@ const Main = ({ bg, setBG, language, theme, className }: MainProps) => {
                         <Button children={activeSection === 3 ? "Exploring" : "Explore"} isPrimary={false} theme={"light"} onClick={() => null} isEnabled={!(activeSection === 3)} />
                     </div>
                     <div onClick={() => activeSection === 4 ? null : setActiveSection(4)} className={"hw_section__item " + (activeSection === 4 ? "hw_section__item--active" : "")}>
-                        <Paragraph size={"medium"} theme={"light"}>My Addons My Discord Bots</Paragraph>
+                        <Paragraph size={"medium"} theme={"light"}>Download Section</Paragraph>
                         <Image src={nav_download} alt={""} theme={"light"} />
                         <Button children={activeSection === 4 ? "Exploring" : "Explore"} isPrimary={false} theme={"light"} onClick={() => null} isEnabled={!(activeSection === 4)} />
                     </div>
@@ -60,16 +62,8 @@ const Main = ({ bg, setBG, language, theme, className }: MainProps) => {
                 <section className="hw_section__details">
                     {activeSection === 0 ? <Trackmania /> 
                     :activeSection === 1 ? <Webdev /> 
-                    :activeSection === 3 ?
-                    <section className="hw_section__details">
-                        <Heading children={"3D Blender And Unreal!"} size={"xxlarge"} theme={"light"} />
-                        <Paragraph size={"medium"} theme={"light"}>3D Blender  And Unreal</Paragraph>
-                    </section>  
-                    :activeSection === 4 ?
-                    <section className="hw_section__details">
-                        <Heading children={"My Addons My Discord Bots!"} size={"xxlarge"} theme={"light"} />
-                        <Paragraph size={"medium"} theme={"light"}>My Addons My Discord Bots</Paragraph>
-                    </section> 
+                    :activeSection === 3 ? <Blender />
+                    :activeSection === 4 ? <Downloads />
                     :activeSection === 5 ? <Images /> :null}
                 </section>
             </div>
