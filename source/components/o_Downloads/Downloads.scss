@@ -14,5 +14,18 @@
         flex-direction: column;
         gap: 20px;
     }
+    .hw_trackmania__skin {
+        div {
+            display: flex;
+            flex-direction: row;
+            gap: 6px;
+            margin-left: 40px;
+            margin-top: -30px;
+
+            .hw_button, .hw_link, .hw_text {
+                position: relative;
+            }
+        }
+    }
 }
 

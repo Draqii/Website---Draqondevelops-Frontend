@@ -6,7 +6,7 @@ import section_race from "../../../public/images/section_race.png"
 import tm_club from "../../../public/images/tm_club.png"
 import tm_map1 from "../../../public/images/tm_map1.png"
 import tm_map2 from "../../../public/images/tm_map2.png"
-import tm_map3 from "../../../public/images/tm_map1.png"
+import tm_map3 from "../../../public/images/tm_map3.png"
 import tm_skin1 from "../../../public/images/tm_skin1.png"
 import tm_skin2 from "../../../public/images/tm_skin2.png"
 import tm_skin3 from "../../../public/images/tm_skin3.png"
@@ -24,15 +24,15 @@ const Trackmania = ({language, theme, className}: TrackmaniaProps) => {
     ]
 
     const skins = [
-        { image: tm_skin1, name: "Stadium_RAD", link: "" },
-        { image: tm_skin2, name: "Stadium_uwu_v1", link: "" },
-        { image: tm_skin3, name: "Stadium_uwu_v2", link: "" },
+        { image: tm_skin1, name: "Stadium_RAD", link: "/zip/Stadium_RAD.zip" },
+        { image: tm_skin2, name: "Stadium_uwu_v1", link: "/zip/Stadium_UwU_v1.zip" },
+        { image: tm_skin3, name: "Stadium_uwu_v2", link: "/zip/Stadium_UwU_v2.zip" },
     ]
     
     const maps = [
-        { image: tm_map1, name: "Glacial Campsite", link: "" },
-        { image: tm_map2, name: "Blossom Hills", link: "" },
-        { image: tm_map3, name: "Draqonic Arena", link: "" },
+        { image: tm_map1, name: "Glacial Campsite", link: "https://trackmania.exchange/mapshow/243892" },
+        { image: tm_map2, name: "Blossom Hills", link: "https://trackmania.exchange/mapshow/243893" },
+        //{ image: tm_map3, name: "Draqonic Arena", link: "" },
     ]
 
     const rank = ({
@@ -42,10 +42,6 @@ const Trackmania = ({language, theme, className}: TrackmaniaProps) => {
     const club = ({
         image: tm_club
     })
-
-    const download = (link) => {
-
-    }
 
     return (
         <div className={setClass("hw_trackmania", [theme], className)}>
@@ -78,7 +74,7 @@ const Trackmania = ({language, theme, className}: TrackmaniaProps) => {
                     {maps.map((map, id) => <div className="hw_trackmania__map">
                         <Paragraph size={"medium"} theme={"light"}>{map.name}</Paragraph>
                         <Image src={map.image} alt={""} theme={"light"} />
-                        <Link children={"Visit On TMX"} isInternal={false} to={map.link} theme={"light"} />
+                        <a className="hw_link hw_text" target={"blank"} children={"Visit On TMX"} href={map.link} />
                     </div>)}
                 </div>
                 <div className="hw_section__detailsinner">
@@ -88,7 +84,7 @@ const Trackmania = ({language, theme, className}: TrackmaniaProps) => {
                     {skins.map((skin, id) => <div className="hw_trackmania__skin">
                         <Paragraph size={"medium"} theme={"light"}>{skin.name}</Paragraph>
                         <Image src={skin.image} alt={""} theme={"light"} />
-                        <Button isEnabled={true} children={"Download Skin"} onClick={() => download(skin.link)} theme={"light"} isPrimary={false} />
+                        <a className="hw_link hw_text" children={"Download Skin"} download href={skin.link} />
                     </div>)}
                 </div>
             </div>
