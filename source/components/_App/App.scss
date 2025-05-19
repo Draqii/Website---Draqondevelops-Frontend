@@ -1,36 +1,3 @@
 .hw_app {
-    height: calc(100vH);
-    &__page {
-        min-height: 650px;
-        position: relative;
-        background: linear-gradient(#FF7CC4 0%, #FFE867 100%);
-    }
-}
-
-.hw_section__teaser {
-    padding-top: 60px;
-    padding-bottom: 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin: auto;
-
-    .hw_heading,
-    .hw_paragraph {
-        font-weight: 900;
-        text-align: center;
-        max-width: 790px;
-        margin: auto;
-    }
-}
-
-.hw_section__details {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-
-    .hw_heading,
-    .hw_paragraph {
-        text-align: left;
-    }
+    height: 100%;
 }

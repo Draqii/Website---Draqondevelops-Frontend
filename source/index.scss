@@ -1,3 +1,8 @@
 html, body, h1, h2, h3, h4, h5, h6, p {
     margin: 0;
 }
+
+html, body, #root {
+    min-height: 100vH;
+    background-color: #4b4448;
+}

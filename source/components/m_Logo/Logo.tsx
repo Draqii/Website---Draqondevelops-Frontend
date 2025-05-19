@@ -18,7 +18,7 @@ const Logo = ({language, theme, className}: LogoProps) => {
     return (
         <div onClick={_onClick} className={setClass("hw_logo", [theme], className)}>
             <Image className="hw_logo__image" src={img_logo} alt={""} theme={"light"} />
-            <Paragraph className="hw_logo__text" size={"small"} theme={"light"}>Draqon<br/>Develops</Paragraph>
+            <Paragraph className="hw_logo__text" size={"small"} theme={"dark"}>Draqon<br/>Develops</Paragraph>
         </div>
     )
 }

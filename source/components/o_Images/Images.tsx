@@ -22,39 +22,11 @@ const Images = ({language, theme, className}: ImagesProps) => {
 
     return (
         <div className={setClass("hw_images", [theme], className)}>
-            <Heading className="hw_images__title" children={"Hai! I'm Draqii!"} size={"teaser"} theme={"light"} />
-            <div className="hw_images__content">
-                <div className="hw_images__section">
-                    <Heading children={"I’m A Creative Nerdy Dude!"} size={"small"} theme={"light"} />
-                    <Image src={me_0} alt={""} theme={"light"} />
-                    <Image src={me_1} alt={""} theme={"light"} />
-                </div>
-                <div className="hw_images__section">
-                    <Heading children={"And I’m A Femboy Too!"} size={"small"} theme={"light"} />
-                    <Image src={me_2} alt={""} theme={"light"} />
-                    <Image src={me_3} alt={""} theme={"light"} />
-                </div>
-                <div className="hw_images__section">
-                    <Heading children={"I Live Near Frankfurt"} size={"small"} theme={"light"} />
-                    <Image src={me_4} alt={""} theme={"light"} />
-                    <Image src={me_5} alt={""} theme={"light"} />
-                </div>
-                <div className="hw_images__section">
-                    <Heading children={"Am Owner Of Two Rabbits"} size={"small"} theme={"light"} />
-                    <Image src={me_6} alt={""} theme={"light"} />
-                    <Image src={me_7} alt={""} theme={"light"} />
-                </div>
-                <div className="hw_images__section">
-                    <Heading children={"My Primitive PC Setup"} size={"small"} theme={"light"} />
-                    <Image src={me_8} alt={""} theme={"light"} />
-                    <Image src={me_9} alt={""} theme={"light"} />
-                </div>
-                <div className="hw_images__section">
-                    <Heading children={"Cozy Part Of My Room >-<"} size={"small"} theme={"light"} />
-                    <Image src={me_10} alt={""} theme={"light"} />
-                    <Image src={me_11} alt={""} theme={"light"} />
-                </div>
-            </div>
+            <Heading
+                className="hw_trackmania__title"
+                children={"More About Me As Person"}
+                size={"teaser"}
+                theme={theme} />
         </div>
     )
 }

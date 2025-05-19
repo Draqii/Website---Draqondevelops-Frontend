@@ -17,8 +17,20 @@ const App = () => {
             <Header />
             <main className="hw_app__page">
                 <Routes>
-                    <Route path="/" element={  <Main bg={bg} setBG={setBG} /> }></Route>
-                    <Route path="/settings" element={ <Gears setBG={setBG} /> } />
+                    <Route 
+                        path="/" 
+                        element={  
+                        <Main 
+                            theme={"dark"} 
+                            bg={bg} 
+                            setBG={setBG} />}>
+                    </Route>
+                    <Route 
+                        path="/settings" 
+                        element={ 
+                        <Gears 
+                            theme={"dark"} 
+                            setBG={setBG} />}/>
                 </Routes>
             </main>
             <Footer />

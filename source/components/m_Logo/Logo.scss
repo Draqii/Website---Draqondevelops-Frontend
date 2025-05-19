@@ -11,20 +11,22 @@
     user-select: none;
     transition: transform 0.15s;
     cursor: pointer;
-    &:hover {
-        transform: scale(1.08);
-    }
-    &:active {
-        transform: scale(0.92);
-    }
     
-    &__text .hw_text {
+    &__text {
         color: #FFFDFB;
     }
     
     &__image {
         height: 100%;
         -webkit-user-drag: none;
+    }
+
+    &:hover {
+        transform: scale(1.08);
+    }
+
+    &:active {
+        transform: scale(0.92);
     }
 }
 
