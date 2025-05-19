@@ -45,5 +45,18 @@
         margin-right: auto; 
         font-weight: 900;
     }
+
+    @media only screen and (max-width: 768px) {
+        .hw_footer__scrollback {
+            display: none;
+        }
+        .hw_footer__copyright {
+            margin-left: 0;
+        }
+        .hw_footer__socials .hw_image {
+            width: 32px;
+            height: 26px;
+        }
+    }
 }
 

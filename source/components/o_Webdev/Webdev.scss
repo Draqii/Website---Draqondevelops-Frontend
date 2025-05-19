@@ -6,24 +6,24 @@
     &__content {
         display: flex;
         flex-direction: row;
-        gap: 40px;
+        gap: 80px;
     }
     &__firstcontent {
         width: 33%;
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 40px;
     }
     &__secondcontent {
         width: 66%;
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 40px;
     }
     &__innercontent {
         display: flex;
         flex-direction: row;
-        gap: 20px;
+        gap: 40px;
 
         .hw_section__details {
             width: 100%;
@@ -31,6 +31,32 @@
     }
     .hw_button .hw_text {
         color: black !important;
+    }
+
+    @media only screen and (max-width: 1440px) {
+        &__content {
+            gap: 40px;
+        }
+    }
+
+
+    @media only screen and (max-width: 768px) {
+        &__content {
+            flex-direction: column;
+            gap: 40px;
+        }
+        &__firstcontent {
+            flex-direction: row;
+        }
+        &__firstcontent, &__secondcontent {
+            width: 100%;
+        }
+    }
+    
+    @media only screen and (max-width: 480px) {
+        &__firstcontent, &__secondcontent, &__innercontent {
+            flex-direction: column;
+        }
     }
 }
 

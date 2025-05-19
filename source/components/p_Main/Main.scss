@@ -1,4 +1,114 @@
 .hw_main {
+    max-width: 920px;
+    margin-left: 460px;
 
+    @media only screen and (max-width: 1440px) {
+        margin-left: 350px;
+    }
+
+    @media only screen and (max-width: 1280px) {
+        margin-left: 180px;
+        margin-right: 40px;
+    }
+
+
+    &__background {
+        bottom: 0px;
+        left: -390px;
+        position: absolute;
+        max-height: 470px;
+        overflow-y: hidden;
+        -webkit-user-drag: none;
+
+        @media only screen and (max-width: 1440px) {
+            left: -320px;
+            max-height: 470px;
+        }
+
+        @media only screen and (max-width: 1280px) {
+            left: -240px;
+            max-height: 470px;
+        }
+    }
+
+    &__top {
+        position: relative;
+        .hw_heading, .hw_text, a {
+            color: #FFFDFB;
+            text-decoration-color: #FFFDFB;
+        }
+    }
+
+    &__bottom {
+        background: linear-gradient(#FF82BE, #9A366A);
+        left: 0px;
+        width: 100%;
+        padding: 40px 80px 60px 80px;
+        position: relative;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        min-height: 300px;
+        box-shadow: 0px -3px 6px 2px rgba(0, 0, 0, 0.4);
+        .hw_heading, .hw_text, a {
+            color: #FFFDFB;
+            text-decoration-color: #242424;
+        }
+        &:has(.hw_trackmania), &:has(.hw_blender), &:has(.hw_webdev), &:has(.hw_downloads) {
+            background: white;
+            .hw_heading, .hw_text, a {
+                color: #242424;
+                text-decoration-color: #242424;
+            }
+        }
+        @media only screen and (max-width: 1440px) {
+            padding: 35px 50px 50px 50px;
+        }
+        @media only screen and (max-width: 768px) {
+            padding: 30px 30px 30px 30px;
+        }
+
+        h2 {
+            padding-bottom: 40px;
+        }
+    }
+
+    .hw_section__item {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 150px;
+        font-weight: 900;
+        text-align: center;
+        transition: transform .15s;
+        cursor: pointer;
+        user-select: none;
+        img {
+            -webkit-user-drag: none;
+            height: 100px;
+        }
+        &:hover {
+            transform: scale(1.08);
+        }
+        &:active {
+            transform: scale(0.92);
+        }
+        .hw_button {
+            background-color: #FF8CB7;
+            border-radius: 6px;
+        }
+        &--active {
+            cursor: default;
+            .hw_button {
+                background-color: #72C3BC;
+                border-radius: 6px;
+            }
+            &:hover {
+                transform: scale(1.0);
+            }
+            &:active {
+                transform: scale(1.0);
+            }
+        }
+    }
 }
 

@@ -6,6 +6,7 @@ import dl_bot1 from "../../../public/images/dl_bot1.png"
 import dl_bot2 from "../../../public/images/dl_bot2.png"
 import dl_bot3 from "../../../public/images/dl_bot3.png"
 import dl_blender from "../../../public/images/dl_blender.png"
+import dl_blank from "../../../public/images/dl_blank.png"
 import { Heading, Paragraph, Button, Image } from "da-awesome-library/build";
 import "./Downloads.scss";
 
@@ -22,19 +23,19 @@ const Downloads = ({ language, theme, className }: DownloadsProps) => {
 
     const web_boilerplates = [
         { 
-            image: dl_blender, 
+            image: dl_blank, 
             name: "Website Frontend", 
             link_git: "", 
             link_dl: "" 
         },
         { 
-            image: dl_blender, 
+            image: dl_blank, 
             name: "Website Backend", 
             link_git: "", 
             link_dl: "" 
         },
         { 
-            image: dl_blender, 
+            image: dl_blank, 
             name: "Component Library", 
             link_git: "", 
             link_dl: "" 
@@ -43,14 +44,14 @@ const Downloads = ({ language, theme, className }: DownloadsProps) => {
 
     const web_packages = [
         { 
-            image: dl_blender, 
+            image: dl_blank, 
             name: "Awesome Nite Switch", 
             link_git: "https://github.com/Draqii/NiteSwitch", 
             link_npm: "npm install --save-dev @latest nite-switch", 
             link_dl: "https://github.com/Draqii/NiteSwitch/archive/refs/heads/main.zip" 
         },
         { 
-            image: dl_blender, 
+            image: dl_blank, 
             name: "HTML Highlight", 
             link_git: "https://github.com/Draqii/HTML-Highlight", 
             link_npm: "npm install --save-dev @latest html-highlight", 
@@ -102,7 +103,7 @@ const Downloads = ({ language, theme, className }: DownloadsProps) => {
                         </div>
                     </section>
                 </div>
-                <div className="hw_webdev__firstcontent">
+                <div className="hw_downloads__firstcontent">
                     <section className="hw_section__details">
                         <Heading children={"My Web Boilerplates"} size={"xlarge"} theme={"light"} />
                         <Paragraph size={"medium"} theme={"light"}>yaaa-</Paragraph>

@@ -116,5 +116,10 @@
             border-radius: 12px;
         }
     }
+    @media only screen and (max-width: 768px) {
+        .hw_section__skins {
+            display: none;
+        }
+    }
 }
 

@@ -77,7 +77,7 @@ const Trackmania = ({language, theme, className}: TrackmaniaProps) => {
                         <a className="hw_link hw_text" target={"blank"} children={"Visit On TMX"} href={map.link} />
                     </div>)}
                 </div>
-                <div className="hw_section__detailsinner">
+                <div className="hw_section__detailsinner hw_section__skins">
                     <Heading children={"Download My Skins!"} size={"xlarge"} theme={"light"} />
                     <Paragraph size={"medium"} theme={"light"}>Feel free to download and use my skins if you like. To install them, move the downloaded .zip into the skins/models/carsport folder and then upload ingame.</Paragraph>
                     <br/>

@@ -13,6 +13,15 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
+
+        .hw_trackmania__skin {
+            img {
+                height: 90px !important;
+            }
+            .hw_button {
+                margin-top: 8px;
+            }
+        }
     }
     .hw_trackmania__skin {
         div {
