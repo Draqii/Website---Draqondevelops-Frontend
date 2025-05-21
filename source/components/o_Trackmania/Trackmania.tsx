@@ -24,15 +24,42 @@ const Trackmania = ({ language, theme, className }: TrackmaniaProps) => {
     ]
 
     const skins = [
-        { image: tm_skin1, name: "Stadium_RAD", link: "/zip/Stadium_RAD.zip" },
-        { image: tm_skin2, name: "Stadium_uwu_v1", link: "/zip/Stadium_UwU_v1.zip" },
-        { image: tm_skin3, name: "Stadium_uwu_v2", link: "/zip/Stadium_UwU_v2.zip" },
+        { 
+            image: tm_skin1, 
+            name: "Stadium_RAD", 
+            link_download: "/zip/Stadium_RAD.zip"
+        },
+        { 
+            image: tm_skin2, 
+            name: "Stadium_uwu_v1", 
+            link_download: "/zip/Stadium_UwU_v1.zip"
+        },
+        { 
+            image: tm_skin3, 
+            name: "Stadium_uwu_v2", 
+            link_download: "/zip/Stadium_UwU_v2.zip"
+        },
     ]
 
     const maps = [
-        { image: tm_map1, name: "Glacial Campsite", link: "https://trackmania.exchange/mapshow/243892" },
-        { image: tm_map2, name: "Blossom Hills", link: "https://trackmania.exchange/mapshow/243893" },
-        //{ image: tm_map3, name: "Draqonic Arena", link: "" },
+        { 
+            image: tm_map1, 
+            name: "Glacial Campsite", 
+            link_tmx: "https://trackmania.exchange/mapshow/243892",
+            link_download: "https://trackmania.exchange/mapgbx/243892"
+        },
+        { 
+            image: tm_map2, 
+            name: "Blossom Hills", 
+            link_tmx: "https://trackmania.exchange/mapshow/243893",
+            link_download: "https://trackmania.exchange/mapgbx/243893"
+        },
+        { 
+            image: tm_map3, 
+            name: "Draqonic Arena", 
+            link_tmx: "",
+            link_download: ""
+        },
     ]
 
     const rank = ({
@@ -97,12 +124,36 @@ const Trackmania = ({ language, theme, className }: TrackmaniaProps) => {
                     size={"medium"}
                     theme={theme} />
                 <div className="hw_trackmania__sectionitems">
-                    {maps.map((map, mapID) =>
-                    <Image 
-                        className="hw_trackmania__matchimage"
-                        src={map.image} 
-                        alt={""} 
-                        theme={"light"} />)}
+                    {maps.map((map, mapID) => 
+                    <div className="hw_trackmania__sectionitem">
+                        <Heading
+                            className="hw_trackmania__sectionheading"
+                            children={map.name}
+                            size={"medium"}
+                            theme={theme} />
+                        <Image 
+                            className="hw_trackmania__matchimage"
+                            src={map.image} 
+                            alt={""} 
+                            theme={"light"} />
+                        <div className="hw_trackmania__sectionlinks">
+                            <Link 
+                                className="hw_trackmania__sectionlink"
+                                to={map.link_tmx}
+                                isInternal={false} 
+                                children={"Visit On TMX!"} 
+                                target={"_blank"}
+                                theme={theme} />
+                            <Link 
+                                className="hw_trackmania__sectionlink"
+                                to={map.link_download}
+                                filename={map.name.split(' ').join("_").toLowerCase()}
+                                isInternal={false} 
+                                children={"Download!"} 
+                                target={"_self"}
+                                theme={theme} />
+                        </div>
+                    </div>)}
                 </div>
             </section>
 
@@ -118,12 +169,29 @@ const Trackmania = ({ language, theme, className }: TrackmaniaProps) => {
                     size={"medium"}
                     theme={theme} />
                 <div className="hw_trackmania__sectionitems">
-                    {skins.map((skin, skinID) =>
-                    <Image 
-                        className="hw_trackmania__matchimage"
-                        src={skin.image} 
-                        alt={""} 
-                        theme={"light"} />)}
+                    {skins.map((skin, skinID) => 
+                    <div className="hw_trackmania__sectionitem">
+                        <Heading
+                            className="hw_trackmania__sectionheading"
+                            children={skin.name}
+                            size={"medium"}
+                            theme={theme} />
+                        <Image 
+                            className="hw_trackmania__matchimage"
+                            src={skin.image} 
+                            alt={""} 
+                            theme={"light"} />
+                        <div className="hw_trackmania__sectionlinks">
+                            <Link 
+                                className="hw_trackmania__sectionlink"
+                                to={skin.link_download}
+                                filename={skin.name.split(' ').join("_").toLowerCase()}
+                                isInternal={false} 
+                                children={"Download!"} 
+                                target={"_self"}
+                                theme={theme} />
+                        </div>
+                    </div>)}
                 </div>
             </section>
         </div>

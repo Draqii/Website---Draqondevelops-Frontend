@@ -5,6 +5,8 @@ import texts from "./Downloads.json"
 import dl_bot1 from "../../../public/images/dl_bot1.png"
 import dl_bot2 from "../../../public/images/dl_bot2.png"
 import dl_bot3 from "../../../public/images/dl_bot3.png"
+import dl_package1 from "../../../public/images/dl_package1.png"
+import dl_package2 from "../../../public/images/dl_package2.png"
 import dl_blender from "../../../public/images/dl_blender.png"
 import dl_blank from "../../../public/images/dl_blank.png"
 import { Heading, Paragraph, Button, Image, Link } from "da-awesome-library/build";
@@ -16,8 +18,8 @@ const Downloads = ({ language, theme, className }: DownloadsProps) => {
         {
             image: dl_blender,
             name: "Simple Photorealism",
-            link_git: "https://github.com/Draqii/Simple-Photorealism",
-            link_dl: "https://github.com/Draqii/Simple-Photorealism/archive/refs/heads/main.zip"
+            link_github: "https://github.com/Draqii/Simple-Photorealism",
+            link_download: "https://github.com/Draqii/Simple-Photorealism/archive/refs/heads/main.zip"
         },
     ]
 
@@ -25,37 +27,35 @@ const Downloads = ({ language, theme, className }: DownloadsProps) => {
         {
             image: dl_blank,
             name: "Website Frontend",
-            link_git: "",
-            link_dl: ""
+            link_github: "",
+            link_download: ""
         },
         {
             image: dl_blank,
             name: "Website Backend",
-            link_git: "",
-            link_dl: ""
+            link_github: "",
+            link_download: ""
         },
         {
             image: dl_blank,
             name: "Component Library",
-            link_git: "",
-            link_dl: ""
+            link_github: "",
+            link_download: ""
         },
     ]
 
     const web_packages = [
         {
-            image: dl_blank,
+            image: dl_package1,
             name: "Awesome Nite Switch",
-            link_git: "https://github.com/Draqii/NiteSwitch",
-            link_npm: "npm install --save-dev @latest nite-switch",
-            link_dl: "https://github.com/Draqii/NiteSwitch/archive/refs/heads/main.zip"
+            link_github: "https://github.com/Draqii/NiteSwitch",
+            link_clipboard: "npm install --save-dev @latest nite-switch",
         },
         {
-            image: dl_blank,
+            image: dl_package2,
             name: "HTML Highlight",
-            link_git: "https://github.com/Draqii/HTML-Highlight",
-            link_npm: "npm install --save-dev @latest html-highlight",
-            link_dl: "https://github.com/Draqii/HTML-Highlight/archive/refs/heads/main.zip"
+            link_github: "https://github.com/Draqii/HTML-Highlight",
+            link_clipboard: "npm install --save-dev @latest html-highlight",
         },
     ]
 
@@ -63,17 +63,20 @@ const Downloads = ({ language, theme, className }: DownloadsProps) => {
         {
             image: dl_bot1,
             name: "Dice Rolling Bot",
-            link: "https://discord.com/oauth2/authorize?client_id=1099491164614295603"
-        },
-        {
-            image: dl_bot3,
-            name: "Roles Management Bot",
-            link: "https://discord.com/oauth2/authorize?client_id=1323068842783670363"
+            link_invite: "https://discord.com/oauth2/authorize?client_id=1099491164614295603",
+            link_clipboard: "https://discord.com/oauth2/authorize?client_id=1099491164614295603"
         },
         {
             image: dl_bot2,
             name: "RPG And Social Bot",
-            link: "https://discord.com/oauth2/authorize?client_id=892762630597509142"
+            link_invite: "https://discord.com/oauth2/authorize?client_id=892762630597509142",
+            link_clipboard: "https://discord.com/oauth2/authorize?client_id=892762630597509142"
+        },
+        {
+            image: dl_bot3,
+            name: "Roles Management Bot",
+            link_invite: "https://discord.com/oauth2/authorize?client_id=1323068842783670363",
+            link_clipboard: "https://discord.com/oauth2/authorize?client_id=1323068842783670363"
         },
     ]
 
@@ -85,87 +88,6 @@ const Downloads = ({ language, theme, className }: DownloadsProps) => {
                 size={"teaser"}
                 theme={theme} />
 
-            <section className="hw_downloads__section">
-                <Heading
-                    className="hw_downloads__heading"
-                    children={"My Web Packages"}
-                    size={"xxlarge"}
-                    theme={theme} />
-                <Paragraph
-                    className="hw_downloads__text"
-                    children={"Free Boilerplates for other developers ^^"}
-                    size={"medium"}
-                    theme={theme} />
-                <div className="hw_downloads__sectionitems">
-                    {web_packages.map((web_package, web_packageID) =>
-                    <div className="hw_downloads__sectionitem">
-                        <Heading
-                            className="hw_downloads__heading"
-                            children={web_package.name}
-                            size={"medium"}
-                            theme={theme} />
-                        <Image 
-                            className="hw_downloads__sectionimg"
-                            src={web_package.image} 
-                            alt={""} 
-                            theme={"light"} />
-                    </div>)}
-                </div>
-            </section>
-            <section className="hw_downloads__section">
-                <Heading
-                    className="hw_downloads__heading"
-                    children={"My Web Boilerplates"}
-                    size={"xxlarge"}
-                    theme={theme} />
-                <Paragraph
-                    className="hw_downloads__text"
-                    children={"Free Boilerplates for other developers ^^"}
-                    size={"medium"}
-                    theme={theme} />
-                <div className="hw_downloads__sectionitems">
-                    {web_boilerplates.map((web_boilerplate, web_boilerplateID) =>
-                    <div className="hw_downloads__sectionitem">
-                        <Heading
-                            className="hw_downloads__heading"
-                            children={web_boilerplate.name}
-                            size={"medium"}
-                            theme={theme} />
-                        <Image 
-                            className="hw_downloads__sectionimg"
-                            src={web_boilerplate.image} 
-                            alt={""} 
-                            theme={"light"} />
-                    </div>)}
-                </div>
-            </section>
-            <section className="hw_downloads__section">
-                <Heading
-                    className="hw_downloads__heading"
-                    children={"My Blender Addons"}
-                    size={"xxlarge"}
-                    theme={theme} />
-                <Paragraph
-                    className="hw_downloads__text"
-                    children={"Blender is a 3D creation software that I created a few addons for. They are for my own workflows, but you can use em"}
-                    size={"medium"}
-                    theme={theme} />
-                <div className="hw_downloads__sectionitems">
-                    {bl_addons.map((bl_addon, bl_addonID) =>
-                    <div className="hw_downloads__sectionitem">
-                        <Heading
-                            className="hw_downloads__heading"
-                            children={bl_addon.name}
-                            size={"medium"}
-                            theme={theme} />
-                        <Image 
-                            className="hw_downloads__sectionimg"
-                            src={bl_addon.image} 
-                            alt={""} 
-                            theme={"light"} />
-                    </div>)}
-                </div>
-            </section>
             <section className="hw_downloads__section">
                 <Heading
                     className="hw_downloads__heading"
@@ -181,7 +103,7 @@ const Downloads = ({ language, theme, className }: DownloadsProps) => {
                     {discord_bots.map((discord_bot, discord_botID) => 
                     <div className="hw_downloads__sectionitem">
                         <Heading
-                            className="hw_downloads__heading"
+                            className="hw_downloads__sectionheading"
                             children={discord_bot.name}
                             size={"medium"}
                             theme={theme} />
@@ -190,13 +112,156 @@ const Downloads = ({ language, theme, className }: DownloadsProps) => {
                             src={discord_bot.image} 
                             alt={""} 
                             theme={"light"} />
-                        <Link 
-                            className="hw_downloads__sectionlink"
-                            to={discord_bot.link}
-                            isInternal={false} 
-                            children={"Invite To Your Server!"} 
-                            target={"_blank"}
+
+                        <div className="hw_downloads__sectionlinks">
+                            <Link 
+                                className="hw_downloads__sectionlink"
+                                to={discord_bot.link_invite}
+                                isInternal={false} 
+                                children={"Invite To Server!"} 
+                                target={"_blank"}
+                                theme={theme} />
+                            <Link 
+                                className="hw_downloads__sectionlink"
+                                to={discord_bot.link_clipboard}
+                                isInternal={false} 
+                                children={"Clipboard Copy!"} 
+                                copyLink={discord_bot.link_clipboard}
+                                target={"_self"}
+                                theme={theme} />
+                        </div>
+                    </div>)}
+                </div>
+            </section>
+            <section className="hw_downloads__section">
+                <Heading
+                    className="hw_downloads__heading"
+                    children={"My Web Packages"}
+                    size={"xxlarge"}
+                    theme={theme} />
+                <Paragraph
+                    className="hw_downloads__text"
+                    children={"Free Boilerplates for other developers ^^"}
+                    size={"medium"}
+                    theme={theme} />
+                <div className="hw_downloads__sectionitems">
+                    {web_packages.map((web_package, web_packageID) =>
+                    <div className="hw_downloads__sectionitem">
+                        <Heading
+                            className="hw_downloads__sectionheading"
+                            children={web_package.name}
+                            size={"medium"}
+                            theme={theme} />
+                        <Image 
+                            className="hw_downloads__sectionimg"
+                            src={web_package.image} 
+                            alt={""} 
                             theme={"light"} />
+                        <div className="hw_downloads__sectionlinks">
+                            <Link 
+                                className="hw_downloads__sectionlink"
+                                to={web_package.link_github}
+                                isInternal={false} 
+                                children={"Visit On GitHub!"} 
+                                target={"_blank"}
+                                theme={theme} />
+                            <Link 
+                                className="hw_downloads__sectionlink"
+                                to={web_package.link_clipboard}
+                                isInternal={false} 
+                                children={"Clipboard Copy!"}
+                                copyLink={web_package.link_clipboard}
+                                target={"_self"}
+                                theme={theme} />
+                        </div>
+                    </div>)}
+                </div>
+            </section>
+            {/*<section className="hw_downloads__section">
+                <Heading
+                    className="hw_downloads__heading"
+                    children={"My Web Boilerplates"}
+                    size={"xxlarge"}
+                    theme={theme} />
+                <Paragraph
+                    className="hw_downloads__text"
+                    children={"Free Boilerplates for other developers ^^"}
+                    size={"medium"}
+                    theme={theme} />
+                <div className="hw_downloads__sectionitems">
+                    {web_boilerplates.map((web_boilerplate, web_boilerplateID) =>
+                    <div className="hw_downloads__sectionitem">
+                        <Heading
+                            className="hw_downloads__sectionheading"
+                            children={web_boilerplate.name}
+                            size={"medium"}
+                            theme={theme} />
+                        <Image 
+                            className="hw_downloads__sectionimg"
+                            src={web_boilerplate.image} 
+                            alt={""} 
+                            theme={"light"} />
+                        <div className="hw_downloads__sectionlinks">
+                            <Link 
+                                className="hw_downloads__sectionlink"
+                                to={web_boilerplate.link_github}
+                                isInternal={false} 
+                                children={"Visit On GitHub!"} 
+                                target={"_blank"}
+                                theme={theme} />
+                            <Link 
+                                className="hw_downloads__sectionlink"
+                                to={web_boilerplate.link_download}
+                                filename={web_boilerplate.name.split(' ').join("_").toLowerCase()}
+                                isInternal={false} 
+                                children={"Download .zip!"} 
+                                target={"_self"}
+                                theme={theme} />
+                        </div>
+                    </div>)}
+                </div>
+            </section>*/}
+            <section className="hw_downloads__section">
+                <Heading
+                    className="hw_downloads__heading"
+                    children={"My Blender Addons"}
+                    size={"xxlarge"}
+                    theme={theme} />
+                <Paragraph
+                    className="hw_downloads__text"
+                    children={"Blender is a 3D creation software that I created a few addons for. They are for my own workflows, but you can use em"}
+                    size={"medium"}
+                    theme={theme} />
+                <div className="hw_downloads__sectionitems">
+                    {bl_addons.map((bl_addon, bl_addonID) =>
+                    <div className="hw_downloads__sectionitem">
+                        <Heading
+                            className="hw_downloads__sectionheading"
+                            children={bl_addon.name}
+                            size={"medium"}
+                            theme={theme} />
+                        <Image 
+                            className="hw_downloads__sectionimg"
+                            src={bl_addon.image} 
+                            alt={""} 
+                            theme={"light"} />
+                        <div className="hw_downloads__sectionlinks">
+                            <Link 
+                                className="hw_downloads__sectionlink"
+                                to={bl_addon.link_github}
+                                isInternal={false} 
+                                children={"Visit On GitHub!"} 
+                                target={"_blank"}
+                                theme={theme} />
+                            <Link 
+                                className="hw_downloads__sectionlink"
+                                to={bl_addon.link_download}
+                                isInternal={false} 
+                                filename={bl_addon.name.split(' ').join("_").toLowerCase()}
+                                children={"Download .zip!"} 
+                                target={"_self"}
+                                theme={theme} />
+                        </div>
                     </div>)}
                 </div>
             </section>
