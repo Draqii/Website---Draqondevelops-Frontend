@@ -27,9 +27,17 @@ const FixedFooter = ({language, theme, className}: FixedFooterProps) => {
 
     return (
         <footer className={setClass("hw_fixedfooter", [theme], className)}>
-            <Heading className="hw_fixedfooter__heading" size={"medium"} theme={"light"}>Powered By</Heading>
+            <Heading 
+                className="hw_fixedfooter__heading" 
+                size={"medium"} 
+                theme={"light"}
+                children={"Powered By"} />
             <section className="hw_fixedfooter__icons">
-                {icons.map((icon, id) => <img className="hw_fixedfooter__icon" src={icon} key={id} />)}
+                {icons.map((icon, id) => 
+                <img 
+                    className="hw_fixedfooter__icon" 
+                    src={icon} 
+                    key={id} />)}
             </section>
         </footer>
     )

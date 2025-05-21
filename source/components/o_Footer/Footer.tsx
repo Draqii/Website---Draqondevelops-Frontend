@@ -16,16 +16,33 @@ const Footer = ({language, theme, className}: FooterProps) => {
     return (
         <footer className={setClass("hw_footer", [theme], className)}>
             <section className="hw_footer__scrollback">
-                <ScrollBack language="english" theme="light" />
+                <ScrollBack 
+                    language="english" 
+                    theme="light" />
             </section>
             <section className="hw_footer__copyright">
-                <Paragraph size={"small"} theme={"light"}>© Draqii 2020-2024</Paragraph>
+                <Paragraph 
+                    children={"© Draqii 2020-2024"}
+                    size={"small"} 
+                    theme={"light"} />
             </section>
             <section className="hw_footer__socials">
-                <Image src={logo_discord} alt={""} theme={"light"} />
-                <Image src={logo_instagram} alt={""} theme={"light"} />
-                <Image src={logo_twitch} alt={""} theme={"light"} />
-                <Image src={logo_youtube} alt={""} theme={"light"} />
+                <Image 
+                    src={logo_discord} 
+                    alt={""} 
+                    theme={"light"} />
+                <Image 
+                    src={logo_instagram} 
+                    alt={""} 
+                    theme={"light"} />
+                <Image 
+                    src={logo_twitch} 
+                    alt={""} 
+                    theme={"light"} />
+                <Image 
+                    src={logo_youtube} 
+                    alt={""} 
+                    theme={"light"} />
             </section>
         </footer>
     )

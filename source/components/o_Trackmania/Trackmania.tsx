@@ -50,6 +50,82 @@ const Trackmania = ({ language, theme, className }: TrackmaniaProps) => {
                 children={"Trackmania Related Stuff"}
                 size={"teaser"}
                 theme={theme} />
+
+            <section className="hw_trackmania__section">
+                <Heading
+                    className="hw_trackmania__heading"
+                    children={"Join The [BONK] Club!"}
+                    size={"xxlarge"}
+                    theme={theme} />
+                <Paragraph
+                    className="hw_trackmania__text"
+                    children={"Join the [BONK] Club and race against our times, or play with us in ranked and tournaments. Our club is open for everyone."}
+                    size={"medium"}
+                    theme={theme} />
+            </section>
+            
+            <section className="hw_trackmania__section">
+                <Heading
+                    className="hw_trackmania__heading"
+                    children={"World Tour Villians!"}
+                    size={"xxlarge"}
+                    theme={theme} />
+                <Paragraph
+                    className="hw_trackmania__text"
+                    children={"I’m currently playing as starter player for Villian in the 2025 World Tour. See our latest matches and ranking here!"}
+                    size={"medium"}
+                    theme={theme} />
+                <div className="hw_trackmania__sectionitems">
+                    {matches.map((match, matchID) =>
+                    <Image 
+                        className="hw_trackmania__matchimage"
+                        src={match.image} 
+                        alt={""} 
+                        theme={"light"} />)}
+                </div>
+            </section>
+
+            <section className="hw_trackmania__section">
+                <Heading
+                    className="hw_trackmania__heading"
+                    children={"Race My Campaign!"}
+                    size={"xxlarge"}
+                    theme={theme} />
+                <Paragraph
+                    className="hw_trackmania__text"
+                    children={"Feel free to explore and race on all my maps. To install them, follow the TMX link and move the downloaded .map into the maps/downloaded folder and play :)"}
+                    size={"medium"}
+                    theme={theme} />
+                <div className="hw_trackmania__sectionitems">
+                    {maps.map((map, mapID) =>
+                    <Image 
+                        className="hw_trackmania__matchimage"
+                        src={map.image} 
+                        alt={""} 
+                        theme={"light"} />)}
+                </div>
+            </section>
+
+            <section className="hw_trackmania__section">
+                <Heading
+                    className="hw_trackmania__heading"
+                    children={"Download My Skins!"}
+                    size={"xxlarge"}
+                    theme={theme} />
+                <Paragraph
+                    className="hw_trackmania__text"
+                    children={"Feel free to download and use my skins if you like. To install them, move the downloaded .zip into the skins/models/carsport folder and then upload ingame."}
+                    size={"medium"}
+                    theme={theme} />
+                <div className="hw_trackmania__sectionitems">
+                    {skins.map((skin, skinID) =>
+                    <Image 
+                        className="hw_trackmania__matchimage"
+                        src={skin.image} 
+                        alt={""} 
+                        theme={"light"} />)}
+                </div>
+            </section>
         </div>
     )
 }

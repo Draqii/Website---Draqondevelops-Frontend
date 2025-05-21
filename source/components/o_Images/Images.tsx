@@ -16,14 +16,14 @@ import me_9 from "../../../public/images/me_9.png"
 import me_10 from "../../../public/images/me_10.png"
 import me_11 from "../../../public/images/me_11.png"
 
-import { Heading, Image } from "da-awesome-library/build";
+import { Heading, Paragraph, Image } from "da-awesome-library/build";
 
 const Images = ({language, theme, className}: ImagesProps) => {
 
     return (
         <div className={setClass("hw_images", [theme], className)}>
             <Heading
-                className="hw_trackmania__title"
+                className="hw_images__title"
                 children={"More About Me As Person"}
                 size={"teaser"}
                 theme={theme} />
