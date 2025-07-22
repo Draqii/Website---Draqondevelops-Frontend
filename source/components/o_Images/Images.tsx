@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { setClass } from "../../modules/setClass";
 import { ImagesProps } from "./Images.types";
 import texts from "./Images.json"
@@ -20,11 +20,17 @@ import { Heading, Paragraph, Image } from "da-awesome-library/build";
 
 const Images = ({language, theme, className}: ImagesProps) => {
 
+    useEffect(() => {
+        let main_title = "DraqonDevelops"
+        let sub_title = "About Me"
+        document.title = sub_title + " - " + main_title
+    }, [])
+
     return (
-        <div className={setClass("hw_images", [theme], className)}>
+        <div className={setClass("hw_images hw_sections", [theme], className)}>
             <Heading
                 className="hw_images__title"
-                children={"More About Me As Person"}
+                children={"More About Myself"}
                 size={"teaser"}
                 theme={theme} />
         </div>

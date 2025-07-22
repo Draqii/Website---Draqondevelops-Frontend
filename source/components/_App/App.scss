@@ -1,3 +1,9 @@
 .hw_app {
     height: 100%;
 }
+
+.hw_sections {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}

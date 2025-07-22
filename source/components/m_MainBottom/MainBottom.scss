@@ -1,0 +1,45 @@
+.hw_mainbottom {
+    position: relative;
+    z-index: 3;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.4);
+    background-color: white;
+    min-height: 200px;
+    margin-left: -15px;
+    width: calc(100vW - 16px - 60px);
+    padding: 30px 30px;
+    gap: 20px;
+
+    .hw_text, .hw_heading {
+        color: #2e2e2e;
+    }
+
+    @media only screen and (min-width: 480px) {
+        width: calc(100vW - 16px - 120px);
+        padding: 40px 60px;
+        gap: 25px;
+
+        &__sections {
+            gap: 25px;
+        }
+    }
+
+    @media only screen and (min-width: 740px) {
+        width: calc(100vW - 16px - 200px);
+        padding: 50px 100px;
+        gap: 35px;
+
+        &__sections {
+            gap: 35px;
+        }
+    }
+
+    @media only screen and (min-width: 1440px) {
+        width: calc(100vW - 16px - 300px);
+        padding: 60px 150px;
+        gap: 50px;
+
+        &__sections {
+            gap: 50px;
+        }
+    }
+}

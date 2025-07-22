@@ -6,6 +6,10 @@
     margin-bottom: -1px;
     margin-top: auto;
 
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
     &__icons {
         display: flex;
         flex-direction: row;
@@ -16,6 +20,26 @@
         flex-wrap: wrap;
     }
 
+    &__section {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    &__link {
+        padding: 6px 0;
+        text-decoration: underline;
+        box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.5);
+        display: block;
+        text-align: center;
+        background-color: #ffffff;
+        color: #2e2e2e;
+        width: 100%;
+        opacity: 0.85;
+        border-radius: 6px;
+    }
+
     &__icon {
         width: 40px;
         max-height: 35px;
@@ -24,9 +48,28 @@
 
     &__heading {
         font-weight: 900;
-        padding-bottom: 20px;
-        padding-top: 10px;
-        color: white;
+    }
+
+    &__githeading {
+        padding-bottom: 0;
+    }
+    
+    &__text {
+        text-align: center;
+        margin: 0 auto;
+        max-width: 600px;
+    }
+    
+    &__text .hw_text, &__heading {
+        color: #FFFDFB;
+    }
+
+    @media only screen and (min-width: 740px) {
+        flex-direction: row;
+        gap: 60px;
+        padding: 0 35px 20px 35px;
+        align-items: center;
+        justify-content: center;
     }
 }
 

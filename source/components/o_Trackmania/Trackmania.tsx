@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { setClass } from "../../modules/setClass";
 import { TrackmaniaProps } from "./Trackmania.types";
 import { Button, Heading, Image, Link, Paragraph } from "da-awesome-library/build";
@@ -12,6 +12,7 @@ import tm_skin2 from "../../../public/images/tm_skin2.png"
 import tm_skin3 from "../../../public/images/tm_skin3.png"
 import tm_match1 from "../../../public/images/tm_match1.png"
 import tm_match2 from "../../../public/images/tm_match2.png"
+import tm_match3 from "../../../public/images/tm_match3.png"
 import tm_ranking from "../../../public/images/tm_ranking.png"
 import texts from "./Trackmania.json"
 import "./Trackmania.scss";
@@ -21,6 +22,7 @@ const Trackmania = ({ language, theme, className }: TrackmaniaProps) => {
     const matches = [
         { image: tm_match1 },
         { image: tm_match2 },
+        { image: tm_match3 },
     ]
 
     const skins = [
@@ -70,25 +72,39 @@ const Trackmania = ({ language, theme, className }: TrackmaniaProps) => {
         image: tm_club
     })
 
+    useEffect(() => {
+            let main_title = "DraqonDevelops"
+            let sub_title = "Trackmania"
+            document.title = sub_title + " - " + main_title
+        }, [])
+
     return (
-        <div className={setClass("hw_trackmania", [theme], className)}>
+        <div className={setClass("hw_trackmania hw_sections", [theme], className)}>
             <Heading
                 className="hw_trackmania__title"
                 children={"Trackmania Related Stuff"}
                 size={"teaser"}
                 theme={theme} />
 
-            <section className="hw_trackmania__section">
-                <Heading
-                    className="hw_trackmania__heading"
-                    children={"Join The [BONK] Club!"}
-                    size={"xxlarge"}
-                    theme={theme} />
-                <Paragraph
-                    className="hw_trackmania__text"
-                    children={"Join the [BONK] Club and race against our times, or play with us in ranked and tournaments. Our club is open for everyone."}
-                    size={"medium"}
-                    theme={theme} />
+            {/*<section className="hw_trackmania__section hw_wonders__introsection">
+                <Image
+                    className="hw_wonders__introimage"
+                    src={club.image}
+                    alt={""}
+                    theme={"light"} />
+                <div className="hw_wonders__introsplit">
+                    <Heading
+                        className="hw_trackmania__heading"
+                        children={"Join The [BONK] Club!"}
+                        size={"xxlarge"}
+                        theme={theme} />
+                    <Paragraph
+                        className="hw_trackmania__text"
+                        children={"Join the [BONK] Club and race against our times, or play with us in ranked and tournaments. Our club is open for everyone."}
+                        size={"medium"}
+                        theme={theme} />
+                </div>
+
             </section>
             
             <section className="hw_trackmania__section">
@@ -105,12 +121,12 @@ const Trackmania = ({ language, theme, className }: TrackmaniaProps) => {
                 <div className="hw_trackmania__sectionitems">
                     {matches.map((match, matchID) =>
                     <Image 
-                        className="hw_trackmania__matchimage"
+                        className="hw_trackmania__sectionitem"
                         src={match.image} 
                         alt={""} 
                         theme={"light"} />)}
                 </div>
-            </section>
+            </section>*/}
 
             <section className="hw_trackmania__section">
                 <Heading

@@ -1,8 +1,4 @@
 .hw_downloads {
-    padding: 0 15px 0 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
 
     &__section {
         display: flex;
@@ -32,8 +28,8 @@
     &__text {
         text-align: left;
         @media only screen and (min-width: 1440px) {
-            font-size: 23px;
-            line-height: 23px;
+            font-size: 22px;
+            line-height: 26px;
             .hw_text {
                 font-size: inherit;
                 line-height: inherit;
@@ -45,17 +41,36 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 25px;
+        @media only screen and (min-width: 740px) {
+            flex-direction: row;
+            gap: 20px;
+        }
+        @media only screen and (min-width: 1440px) {
+            flex-direction: row;
+            gap: 35px;
+        }
     }
 
     &__sectionitem {
         overflow: hidden;
         position: relative;
-        width: fit-content;
+        width: 100%;
+        max-height: 140px;
+        min-height: 120px;
+        box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.5);
+        @media only screen and (min-width: 740px) {
+            width: calc(50% - 20px);
+        }
+        @media only screen and (min-width: 1440px) {
+            width: calc(33% - 35px);
+        }
     }
 
     &__sectionimg {
-        max-width: 100%;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
     }
 
     &__sectionheading {
@@ -89,28 +104,24 @@
     &__sectionlink {
         padding: 6px 0;
         text-decoration: underline;
+        box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.5);
     }
     
     &__sectionheading, &__sectionlink {
         display: block;
         text-align: center;
-        background-color: #242424;
-        color: #ffffff;
+        background-color: #ffffff;
+        color: #2e2e2e;
         width: 100%;
+        opacity: 0.85;
+    }
+    &__sectionheading, &__sectionlink, &__sectionitem {
         border-radius: 6px;
     }
+    &__sectionheading {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
 
-    @media only screen and (min-width: 480px) {
-        padding: 0 30px;
-        gap: 25px;
-    }
-    @media only screen and (min-width: 740px) {
-        padding: 0 40px;
-        gap: 35px;
-    }
-    @media only screen and (min-width: 1440px) {
-        padding: 0 60px;
-        gap: 50px;
-    }
 }
 

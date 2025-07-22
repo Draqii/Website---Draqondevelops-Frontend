@@ -1,8 +1,4 @@
 .hw_images {
-    padding: 0 15px 0 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
 
     &__section {
         display: flex;
@@ -32,8 +28,8 @@
     &__text {
         text-align: left;
         @media only screen and (min-width: 1440px) {
-            font-size: 23px;
-            line-height: 23px;
+            font-size: 22px;
+            line-height: 26px;
             .hw_text {
                 font-size: inherit;
                 line-height: inherit;
@@ -41,16 +37,4 @@
         }
     }
 
-    @media only screen and (min-width: 480px) {
-        padding: 0 30px;
-        gap: 25px;
-    }
-    @media only screen and (min-width: 740px) {
-        padding: 0 40px;
-        gap: 35px;
-    }
-    @media only screen and (min-width: 1440px) {
-        padding: 0 60px;
-        gap: 50px;
-    }
 }

@@ -1,0 +1,182 @@
+.hw_wonders {
+
+    &__subheading {
+        text-align: left;
+    }
+
+    &__section {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        @media only screen and (min-width: 740px) {
+            gap: 16px;
+        }
+    }
+
+    &__sectionchild {
+        @media only screen and (min-width: 740px) {
+            width: 50%;
+        }
+        @media only screen and (min-width: 1440px) {
+            width: 50%;
+        }
+    }
+
+    &__sectionparent {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    &__earlyparent {
+        @media only screen and (min-width: 740px) {
+            gap: 35px; // tablet gap between sections
+            flex-direction: row !important;
+        }
+        @media only screen and (min-width: 1440px) {
+            gap: 55px; // desktop gap between sections
+        }
+    }
+
+    &__title {
+        @media only screen and (max-width: 480px) {
+            letter-spacing: -2.1px;
+            font-size: 40px;
+            line-height: 42px;
+        }
+    }
+
+    &__heading {
+        text-align: left;
+        @media only screen and (min-width: 1440px) {
+            font-size: 50px;
+            line-height: 50px;
+        }
+    }
+
+    &__text {
+        text-align: left;
+        @media only screen and (min-width: 1440px) {
+            font-size: 22px;
+            line-height: 26px;
+            .hw_text {
+                font-size: inherit;
+                line-height: inherit;
+            }
+        }
+    }
+
+    &__sectionitems {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+        @media only screen and (min-width: 740px) {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    &__sectionitem {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        max-height: 140px;
+        box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.5);
+        @media only screen and (min-width: 740px) {
+            width: calc(100% - 10px);
+        }
+        @media only screen and (min-width: 1440px) {
+            width: calc(100% - 10px);
+        }
+    }
+
+    &__sectionimg {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__sectionheading {
+        position: absolute;
+        top: 0px; 
+        left: 0px;
+        padding: 8px 0;
+
+        @media only screen and (min-width: 740px) {
+            font-size: 22px;
+            line-height: 22px;
+        }
+        @media only screen and (min-width: 1440px) {
+            font-size: 25px;
+            line-height: 25px;
+            padding: 12px 0;
+        }
+    }
+
+    &__sectionlinks {
+        padding: 10px;
+        width: calc(100% - 20px);
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        display: flex;
+        flex-direction: row;
+        gap:10px;
+    }
+    
+    &__sectionlink {
+        padding: 6px 0;
+        text-decoration: underline;
+        box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.5);
+    }
+    
+    &__sectionheading, &__sectionlink {
+        display: block;
+        text-align: center;
+        background-color: #ffffff;
+        color: #2e2e2e;
+        width: 100%;
+        opacity: 0.85;
+    }
+    &__sectionheading, &__sectionlink, &__sectionitem {
+        border-radius: 6px;
+    }
+
+    &__sectionheading {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+
+
+    &__introsplit {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__introsection {
+        display: flex;
+        flex-direction: row;
+    }
+
+
+    &__introimage {
+        margin: 0 auto auto auto;
+        display: none;
+        @media only screen and (min-width: 740px) {
+            display: block;
+        }
+    }
+
+    &__earlyparent {
+        .hw_link {
+            background-color: #ff84b1;
+            color: #FFFDFB;
+            padding: 12px 10px;
+            width: calc(100% - 20px);
+        }
+    }
+
+
+}
